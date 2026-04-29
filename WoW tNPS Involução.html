@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EP/MIX W13-W17</title>
+<style>
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f5f4f0; margin: 0; padding: 24px; font-size: 13px; }
+  h1 { color: #820ad1; font-size: 17px; margin: 0 0 4px 0; }
+  .sub { color: #666; font-size: 12px; margin-bottom: 20px; }
+  .verdict { background: #820ad1; color: white; border-radius: 8px; padding: 14px 20px; margin-bottom: 18px; }
+  .verdict strong { font-size: 16px; }
+  .verdict p { margin: 6px 0 0; font-size: 12px; opacity: 0.9; }
+  .row3 { display: flex; gap: 14px; margin-bottom: 18px; }
+  .box { background: white; border-radius: 8px; padding: 14px 18px; flex: 1; box-shadow: 0 1px 3px rgba(0,0,0,.07); }
+  .box .lbl { font-size: 11px; color: #888; }
+  .box .val { font-size: 22px; font-weight: 700; margin: 3px 0; }
+  .box .hint { font-size: 11px; }
+  .green { color: #007a4d; }
+  .red { color: #cc3300; }
+  .dark { color: #222; }
+  section { background: white; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.07); }
+  section h2 { font-size: 12px; color: #820ad1; text-transform: uppercase; letter-spacing: .5px; margin: 0 0 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { background: #f5f4f0; color: #820ad1; font-size: 11px; font-weight: 600; padding: 6px 10px; text-align: right; }
+  th:first-child { text-align: left; }
+  td { padding: 6px 10px; text-align: right; border-bottom: 1px solid #f0efec; color: #333; }
+  td:first-child { text-align: left; }
+  tr.hl { background: #fff8f0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  .note { background: #fff8e7; border-left: 3px solid #820ad1; border-radius: 0 6px 6px 0; padding: 10px 14px; font-size: 12px; line-height: 1.6; }
+  .note strong { color: #820ad1; }
+  .tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 10px; }
+  .tag-mix { background: #ffe5dc; color: #cc3300; }
+  .tag-perf { background: #ffd6f0; color: #820ad1; }
+  .tag-ok { background: #d6f0e0; color: #007a4d; }
+</style>
+</head>
+<body>
+
+<h1>Diagnóstico de Queda W13→W17 — Customer Security (N1+N2)</h1>
+<p class="sub">74,17% → 71,89% | Queda acumulada −2,28pp em 5 semanas</p>
+
+<div class="verdict">
+  <strong>É Efeito MIX — não é Performance</strong>
+  <p>A performance dos agentes <b>melhorou</b> (+3,17pp EP acumulado). O que está destruindo o tNPS é a composição do volume de contatos (−5,05pp EM acumulado).</p>
+</div>
+
+<div class="row3">
+  <div class="box"><div class="lbl">EP Acumulado (Performance)</div><div class="val green">+3,17pp</div><div class="hint green">agentes melhoraram ✓</div></div>
+  <div class="box"><div class="lbl">EM Acumulado (Mix)</div><div class="val red">−5,05pp</div><div class="hint red">composição de volume deteriorou ✗</div></div>
+  <div class="box"><div class="lbl">Delta Real W13→W17</div><div class="val dark">−2,02pp</div><div class="hint" style="color:#888">74,13% → 72,11%</div></div>
+</div>
+
+<section>
+  <h2>Decomposição Semanal — EP vs EM</h2>
+  <table>
+    <thead>
+      <tr><th>Semana</th><th>Ref.</th><th>tNPS</th><th>Δ Total</th><th>EP (Perf.)</th><th>EM (Mix)</th><th>Driver</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>W13</b></td><td>22/03</td><td>74,13%</td><td class="green">+1,28pp</td><td class="green">+2,41pp</td><td class="red">−1,13pp</td><td><span class="tag tag-ok">Perf ✓</span></td></tr>
+      <tr class="hl"><td><b>W14</b></td><td>29/03</td><td>73,34%</td><td class="red"><b>−0,79pp</b></td><td class="red"><b>−1,03pp</b></td><td class="green">+0,24pp</td><td><span class="tag tag-perf">⚠ PERF</span></td></tr>
+      <tr class="hl"><td><b>W15</b></td><td>05/04</td><td>72,72%</td><td class="red"><b>−0,63pp</b></td><td class="green">+0,20pp</td><td class="red"><b>−0,83pp</b></td><td><span class="tag tag-mix">🔴 MIX</span></td></tr>
+      <tr class="hl"><td><b>W16</b></td><td>12/04</td><td>72,36%</td><td class="red"><b>−0,35pp</b></td><td class="green">+0,39pp</td><td class="red"><b>−0,74pp</b></td><td><span class="tag tag-mix">🔴 MIX</span></td></tr>
+      <tr class="hl"><td><b>W17</b></td><td>19/04</td><td>72,11%</td><td class="red"><b>−0,25pp</b></td><td class="green">+0,26pp</td><td class="red"><b>−0,50pp</b></td><td><span class="tag tag-mix">🔴 MIX</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="two">
+  <section>
+    <h2>🔴 Top MIX Detratores — Acumulado W13→W17</h2>
+    <table>
+      <thead><tr><th>Motivo</th><th>EM acc.</th><th>Share W13</th><th>Share W17</th></tr></thead>
+      <tbody>
+        <tr><td>cs_transaction_delay_rule</td><td class="red"><b>−4,08pp</b></td><td>26,1%</td><td>21,2%</td></tr>
+        <tr><td>others_account_recovery</td><td class="red"><b>−2,27pp</b></td><td>5,0%</td><td>0,9%</td></tr>
+        <tr><td>others_login</td><td class="red">−0,63pp</td><td>10,6%</td><td>9,8%</td></tr>
+        <tr><td>nu_conta_block_and_unblock</td><td class="red">−0,59pp</td><td>3,0%</td><td>2,2%</td></tr>
+        <tr><td>nu_conta_pix_in_not_received</td><td class="red">spike W17</td><td>0,1%</td><td>4,7%</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>⚠ W14: Único Spike de Performance</h2>
+    <table>
+      <thead><tr><th>Motivo</th><th>EP W14</th><th>tNPS W13→W14</th></tr></thead>
+      <tbody>
+        <tr><td>cs_transaction_delay_rule</td><td class="red"><b>−0,86pp</b></td><td>82,9→79,8%</td></tr>
+        <tr><td>account_info_password</td><td class="red">−0,49pp</td><td>83,3→78,1%</td></tr>
+        <tr><td>others_about_nubank</td><td class="red">−0,22pp</td><td>81,0→60,0%</td></tr>
+        <tr><td>wallets_google_pay</td><td class="red">−0,17pp</td><td>92,2→75,0%</td></tr>
+        <tr><td>nu_conta_block_and_unblock</td><td class="red">−0,14pp</td><td>72,8→68,5%</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<section>
+  <h2>📌 Implicações e Próximos Passos</h2>
+  <div class="note">
+    <p><strong>1. Bypass (cs_transaction_delay_rule) — causa primária</strong><br>
+    Perdeu ~5pp de share em 5 semanas (26,1% → 21,2%). É a fila com tNPS mais alto do portfólio (~83%). Perder volume dela força o peso para filas de menor tNPS. <b>Investigar: houve mudança de roteamento, sazonalidade ou redução de regras ativas que explique a queda de volume?</b></p>
+    <p style="margin-top:10px"><strong>2. others_account_recovery — efeito esperado da reclassificação</strong><br>
+    Share caiu de 5% → 0,9% (reclassificação para auth_device). O EM negativo reflete a perda de contribuição absoluta desta fila (tNPS ~56%). Parte foi absorvida por auth_device (+1,2pp share, tNPS 67%). <b>O net líquido da reclassificação foi levemente positivo, mas a fórmula decompõe cada fila individualmente.</b></p>
+    <p style="margin-top:10px"><strong>3. nu_conta_pix_in_not_received — spike pontual em W17</strong><br>
+    Share saltou de 0,1% → 4,7% em W17, com tNPS de apenas 40%. EP isolado em W17 = −0,96pp. <b>Monitorar se é evento pontual (ex: instabilidade de PIX) ou início de tendência.</b></p>
+  </div>
+</section>
+
+</body>
+</html>
